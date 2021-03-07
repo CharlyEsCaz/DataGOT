@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DataGoT</string>
+    <string name="characters">Characters</string>
+    <string name="battles">Battles</string>
+    <string name="places">Places</string>
+    <string name="houses">Houses</string>
+    <string name="religions">Religions</string>
+    <string name="episodes">Episodes</string>
 </resources>

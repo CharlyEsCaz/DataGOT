@@ -5,6 +5,7 @@ plugins {
 
 apply from: '../config/functions.gradle'
 apply from: '../config/versions.gradle'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -42,6 +43,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -51,6 +55,11 @@ dependencies {
     //Kotlin
     implementation deps.kotlin.stdlib
     implementation deps.kotlin.corektx
+    kapt deps.kotlin.kapt
+
+    //Shape Of View
+    implementation deps.utils.shape_of_view
+
 
     //Support
     implementation deps.support.appcompat
