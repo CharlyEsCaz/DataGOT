@@ -3,38 +3,39 @@ package mx.com.charlyescaz.datagot.models
 import com.google.gson.annotations.SerializedName
 
 class CharacterViewModel {
-    var id: String? = ""
+    val id: String = ""
 
-    var name: String? = ""
+    val name: String = ""
 
     @SerializedName("image")
-    var imgUrl: String? = ""
+    val imgUrl: String = ""
 
-    var titles: List<String>? = null
+    val titles: List<String>? = null
 
-    var origin: List<String>? = null
+    val origin: List<String>? = null
 
-    var siblings: List<String>? = null
+    val siblings: List<String>? = null
 
-    var spouse: List<String>? = null
+    val spouse: List<String>? = null
 
-    var lovers: List<String>? = null
+    val lovers: List<String>? = null
 
-    var religion: List<String>? = null
+    @SerializedName("religion")
+    val religions: List<String>? = null
 
-    var allegiances: List<String>? = null
+    val allegiances: List<String>? = null
 
-    var gender: String? = ""
+    val gender: String = ""
 
-    var alive: Boolean? = false
+    val alive: Boolean = false
 
-    var death: Int? = 0
+    val death: Int = 0
 
-    var father: String? = ""
+    val father: String = ""
 
-    var house: String? = ""
+    val house: String = ""
 
-    var actor: String? = ""
+    val actor: String = ""
 
 //    var appearances: List<String>? = null
 }
