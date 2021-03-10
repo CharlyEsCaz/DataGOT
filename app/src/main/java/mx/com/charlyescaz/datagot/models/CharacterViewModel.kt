@@ -36,5 +36,5 @@ class CharacterViewModel {
 
     var actor: String? = ""
 
-    var appearances: List<String>? = null
+//    var appearances: List<String>? = null
 }

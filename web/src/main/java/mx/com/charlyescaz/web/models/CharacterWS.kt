@@ -35,7 +35,7 @@ data class CharacterWS (
 
     var house: String? = "",
 
-    var actor: String? = "",
+    var actor: String? = ""
 
-    var appearances: List<String>? = null
+//    var appearances: List<String>? = null
 )
