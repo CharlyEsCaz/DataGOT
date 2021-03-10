@@ -6,6 +6,7 @@ import mx.com.charlyescaz.web.api.serializers.BooleanDeserializer
 import mx.com.charlyescaz.web.api.serializers.BooleanSerializer
 import mx.com.charlyescaz.web.api.serializers.DateDeserializer
 import mx.com.charlyescaz.web.api.serializers.DateSerializer
+import mx.com.charlyescaz.web.models.CharacterWS
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -83,6 +84,15 @@ object APIDataGoT {
         Log.e(TAG, "Message is: " + t.message)
         callback(false, null)
     }
+
+    fun getCharacter(name: String, cb: (success: Boolean, data: CharacterWS?) -> Unit){
+        doRequest(
+            "Get Character",
+            apiService.getCharacter(name),
+            cb
+        )
+    }
+
 
 
 }

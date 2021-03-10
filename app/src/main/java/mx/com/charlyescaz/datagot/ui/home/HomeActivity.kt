@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import mx.com.charlyescaz.datagot.R
 import mx.com.charlyescaz.datagot.databinding.ActivityHomeBinding
+import mx.com.charlyescaz.datagot.interactors.CharacterInteractor
 import mx.com.charlyescaz.datagot.ui.CustomActivity
 
 class HomeActivity: CustomActivity() {
@@ -16,5 +17,11 @@ class HomeActivity: CustomActivity() {
         super.onCreate(savedInstanceState)
         vBind = DataBindingUtil.setContentView(this, R.layout.activity_home)
         setupNoNavigation()
+
+        CharacterInteractor.retrieveCharacter("Jon Snow"){ character ->
+            if(character == null){
+
+            }
+        }
     }
 }
