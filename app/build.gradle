@@ -60,6 +60,8 @@ dependencies {
     //Shape Of View
     implementation deps.utils.shape_of_view
 
+    //Glide
+    api deps.utils.glide
 
     //Support
     implementation deps.support.appcompat

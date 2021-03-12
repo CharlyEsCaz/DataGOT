@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="mx.com.charlyescaz.datagot.models.CharacterViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/cv_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                loadUrl="@{character.imgUrl}"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_bastards" />
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_photo"
+            tools:text="Name Character" />
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/gender"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="match_parent"
+                tools:text="Female"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/titles"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_titles"
+                android:layout_width="match_parent"
+                tools:text="Lord, Sr"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/origin"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_origin"
+                android:layout_width="match_parent"
+                tools:text="Winterfell"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/siblings"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_siblings"
+                android:layout_width="match_parent"
+                tools:text="None"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/spouse"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_spouse"
+                android:layout_width="match_parent"
+                tools:text="None"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/lovers"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_lovers"
+                android:layout_width="match_parent"
+                tools:text="None"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/religion"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_religion"
+                android:layout_width="match_parent"
+                tools:text="None"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/allegiances"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_sub_title"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_allegiances"
+                android:layout_width="match_parent"
+                tools:text="None"
+                android:textColor="@color/secondary"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

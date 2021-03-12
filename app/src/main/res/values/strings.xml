@@ -6,4 +6,12 @@
     <string name="houses">Houses</string>
     <string name="religions">Religions</string>
     <string name="episodes">Episodes</string>
+    <string name="titles">Titles</string>
+    <string name="origin">Origin</string>
+    <string name="siblings">Siblings</string>
+    <string name="spouse">Spouse</string>
+    <string name="lovers">Lovers</string>
+    <string name="religion">Religion</string>
+    <string name="allegiances">Allegiances</string>
+    <string name="gender">Gender</string>
 </resources>

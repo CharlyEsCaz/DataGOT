@@ -21,35 +21,35 @@
             android:id="@+id/cv_characters"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            android:layout_marginTop="16dp"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/cv_battles"
-            app:layout_constraintTop_toBottomOf="@id/logo">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_bastards" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bastards" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/characters"
-                        android:textColor="@color/secondary"
-                        android:textSize="@dimen/text_sub_title" />
-                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/characters"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title" />
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -59,17 +59,17 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toEndOf="@id/cv_characters"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cv_characters">
+            app:layout_constraintStart_toEndOf="@id/cv_characters"
+            app:layout_constraintTop_toTopOf="@id/cv_characters"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -92,20 +92,20 @@
             android:id="@+id/cv_places"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            android:layout_marginTop="16dp"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/cv_battles"
-            app:layout_constraintTop_toBottomOf="@id/cv_characters">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_characters"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -130,17 +130,17 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toEndOf="@id/cv_characters"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cv_places">
+            app:layout_constraintStart_toEndOf="@id/cv_characters"
+            app:layout_constraintTop_toTopOf="@id/cv_places"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -163,20 +163,20 @@
             android:id="@+id/cv_religions"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            android:layout_marginTop="16dp"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/cv_battles"
-            app:layout_constraintTop_toBottomOf="@id/cv_places">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_places"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -201,17 +201,17 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blackLight"
             app:cardCornerRadius="12dp"
-            app:strokeColor="@color/secondary"
-            app:strokeWidth="1dp"
-            app:layout_constraintStart_toEndOf="@id/cv_characters"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cv_religions">
+            app:layout_constraintStart_toEndOf="@id/cv_characters"
+            app:layout_constraintTop_toTopOf="@id/cv_religions"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="80dp"

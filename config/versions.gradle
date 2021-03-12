@@ -21,6 +21,7 @@ versions.retrofit = "2.6.0"
 versions.retrofit_interceptor = "3.12.1"
 //utils
 versions.shape_of_view = "1.4.7"
+versions.glide = "4.11.0"
 
 ext.versions = versions
 
@@ -50,6 +51,7 @@ retrofit.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versio
 
 def utils = [:]
 utils.shape_of_view = "com.github.florent37:shapeofview:$versions.shape_of_view"
+utils.glide = "com.github.bumptech.glide:glide:$versions.glide"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.kotlin = kotlin

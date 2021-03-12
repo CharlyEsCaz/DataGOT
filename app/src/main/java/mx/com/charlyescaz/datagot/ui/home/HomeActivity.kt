@@ -16,12 +16,9 @@ class HomeActivity: CustomActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vBind = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        setupNoNavigation()
+    }
 
-        CharacterInteractor.retrieveCharacter("Jon Snow"){ character ->
-            if(character == null){
+    fun setupMenu(){
 
-            }
-        }
     }
 }
