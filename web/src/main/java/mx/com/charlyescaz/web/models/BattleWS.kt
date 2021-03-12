@@ -6,8 +6,8 @@ data class BattleWS (
     val id: String? = "",
 
     val name: String? = "",
-    @SerializedName("dateOfBattle")
 
+    @SerializedName("dateOfBattle")
     val date: String? = "",
 
     val conflict: String? = "",
