@@ -13,13 +13,12 @@ import mx.com.charlyescaz.datagot.ui.home.HomeActivity
 class LoadingActivity: CustomActivity() {
 
     private lateinit var vBind: ActivityLoadingBinding
-    private val TIME_OUT = 3000L
+    private val timeOut = 2000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         vBind = DataBindingUtil.setContentView(this, R.layout.activity_loading)
-        setupNoNavigation()
         setupDelay()
     }
 
@@ -28,6 +27,6 @@ class LoadingActivity: CustomActivity() {
             val i = Intent(this, HomeActivity::class.java)
             startActivity(i)
             finish()
-        }, TIME_OUT)
+        }, timeOut)
     }
 }

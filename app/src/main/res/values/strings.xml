@@ -14,4 +14,10 @@
     <string name="religion">Religion</string>
     <string name="allegiances">Allegiances</string>
     <string name="gender">Gender</string>
+    <string name="house">House</string>
+    <string name="alive">Alive</string>
+    <string name="year_of_death">Year of Death</string>
+    <string name="father">Father</string>
+    <string name="empty_characters">No Characters</string>
+    <string name="still_alive">Still Alive</string>
 </resources>

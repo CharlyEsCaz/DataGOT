@@ -16,25 +16,23 @@
         android:layout_height="match_parent"
         android:background="@color/primary">
 
-        <com.github.florent37.shapeofview.shapes.CircleView
-            android:id="@+id/cv_photo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:elevation="2dp"
+        <include
+            android:id="@+id/i_toolbar"
+            layout="@layout/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_photo"
-                loadUrl="@{character.imgUrl}"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/ic_bastards" />
-
-        </com.github.florent37.shapeofview.shapes.CircleView>
+        <ImageView
+            android:id="@+id/iv_photo"
+            loadUrl="@{character.imgUrl}"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_bastards"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -44,142 +42,285 @@
             android:textColor="@color/secondary"
             android:textSize="@dimen/text_title"
             android:textStyle="bold"
+            android:text="@{character.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cv_photo"
-            tools:text="Name Character" />
+            app:layout_constraintTop_toBottomOf="@id/iv_photo"
+            tools:text="Character Name " />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary"
+            android:text="@{character.actor}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="vertical"
-            android:layout_margin="12dp"
+            tools:text="Actor Name" />
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/gender"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_gender"
-                android:layout_width="match_parent"
-                tools:text="Female"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_actor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp">
 
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:text="@string/titles"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_titles"
-                android:layout_width="match_parent"
-                tools:text="Lord, Sr"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/origin"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_origin"
-                android:layout_width="match_parent"
-                tools:text="Winterfell"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/siblings"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_siblings"
-                android:layout_width="match_parent"
-                tools:text="None"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/gender"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/text_sub_title"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/spouse"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_spouse"
-                android:layout_width="match_parent"
-                tools:text="None"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/house"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/text_sub_title"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/lovers"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_lovers"
-                android:layout_width="match_parent"
-                tools:text="None"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/religion"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_religion"
-                android:layout_width="match_parent"
-                tools:text="None"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/allegiances"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_sub_title"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_allegiances"
-                android:layout_width="match_parent"
-                tools:text="None"
-                android:textColor="@color/secondary"
-                android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@{character.gender}"
+                        android:textColor="@color/secondary"
+                        tools:text="Female" />
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@{character.house}"
+                        android:textColor="@color/secondary"
+                        tools:text="Winterfell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/alive"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/text_sub_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/year_of_death"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/text_sub_title"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_alive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/secondary"
+                        tools:text="Yes" />
+
+                    <TextView
+                        android:id="@+id/tv_death"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/secondary"
+                        android:text="@string/still_alive" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/origin"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_origin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="Winterfell" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/titles"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="Lord, Sr" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/father"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    android:text="@{character.father}"
+                    tools:text="Winterfell" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/siblings"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_siblings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="None" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/spouse"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_spouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="None" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/lovers"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_lovers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="None" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/religion"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_religion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="None" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/allegiances"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_sub_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_allegiances"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    tools:text="None" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
