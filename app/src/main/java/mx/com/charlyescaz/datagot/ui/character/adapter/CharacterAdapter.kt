@@ -8,7 +8,9 @@ import mx.com.charlyescaz.datagot.R
 import mx.com.charlyescaz.datagot.databinding.ItemCharacterBinding
 import mx.com.charlyescaz.datagot.models.CharacterViewModel
 
-class CharacterAdapter(private val characters: List<CharacterViewModel>, private val onClick: ( character: CharacterViewModel) -> Unit): RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+class CharacterAdapter(private val characters: List<CharacterViewModel>,
+                       private val onClick: ( character: CharacterViewModel) -> Unit)
+    : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(

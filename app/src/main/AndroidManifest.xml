@@ -21,6 +21,8 @@
         <activity android:name=".ui.home.HomeActivity" />
         <activity android:name=".ui.character.CharactersActivity" />
         <activity android:name=".ui.character.CharacterDetailsActivity" />
+        <activity android:name=".ui.battles.BattlesActivity" />
+        <activity android:name=".ui.battles.BattleDetailsActivity" />
     </application>
 
 </manifest>

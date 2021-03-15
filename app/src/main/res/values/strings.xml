@@ -19,5 +19,11 @@
     <string name="year_of_death">Year of Death</string>
     <string name="father">Father</string>
     <string name="empty_characters">No Characters</string>
+    <string name="empty_battles">No Battles</string>
     <string name="still_alive">Still Alive</string>
+    <string name="conflict">Conflict</string>
+    <string name="factions_one">Factions One</string>
+    <string name="commanders">Commanders</string>
+    <string name="forces">Forces</string>
+    <string name="factions_two">Factions Two</string>
 </resources>

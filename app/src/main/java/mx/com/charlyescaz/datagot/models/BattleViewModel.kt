@@ -6,8 +6,8 @@ class BattleViewModel {
     val id: String = ""
 
     val name: String = ""
-    @SerializedName("dateOfBattle")
 
+    @SerializedName("dateOfBattle")
     val date: String = ""
 
     val conflict: String = ""

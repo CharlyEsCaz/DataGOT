@@ -9,6 +9,7 @@ import mx.com.charlyescaz.datagot.R
 import mx.com.charlyescaz.datagot.databinding.ActivityHomeBinding
 import mx.com.charlyescaz.datagot.interactors.CharacterInteractor
 import mx.com.charlyescaz.datagot.ui.CustomActivity
+import mx.com.charlyescaz.datagot.ui.battles.BattlesActivity
 import mx.com.charlyescaz.datagot.ui.character.CharactersActivity
 
 class HomeActivity: CustomActivity() {
@@ -21,9 +22,13 @@ class HomeActivity: CustomActivity() {
         setupMenu()
     }
 
-    fun setupMenu(){
+    private fun setupMenu(){
         vBind.cvCharacters.setOnClickListener {
             startActivity( Intent(this, CharactersActivity::class.java) )
+        }
+
+        vBind.cvBattles.setOnClickListener {
+            startActivity( Intent(this, BattlesActivity::class.java) )
         }
     }
 }
