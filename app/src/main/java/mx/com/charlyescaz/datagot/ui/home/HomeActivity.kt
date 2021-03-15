@@ -11,6 +11,7 @@ import mx.com.charlyescaz.datagot.interactors.CharacterInteractor
 import mx.com.charlyescaz.datagot.ui.CustomActivity
 import mx.com.charlyescaz.datagot.ui.battles.BattlesActivity
 import mx.com.charlyescaz.datagot.ui.character.CharactersActivity
+import mx.com.charlyescaz.datagot.ui.places.PlacesActivity
 
 class HomeActivity: CustomActivity() {
 
@@ -29,6 +30,22 @@ class HomeActivity: CustomActivity() {
 
         vBind.cvBattles.setOnClickListener {
             startActivity( Intent(this, BattlesActivity::class.java) )
+        }
+
+        vBind.cvPlaces.setOnClickListener {
+            startActivity( Intent(this, PlacesActivity::class.java) )
+        }
+
+        vBind.cvEpisodes.setOnClickListener {
+
+        }
+
+        vBind.cvHouses.setOnClickListener {
+
+        }
+
+        vBind.cvReligions.setOnClickListener {
+
         }
     }
 }

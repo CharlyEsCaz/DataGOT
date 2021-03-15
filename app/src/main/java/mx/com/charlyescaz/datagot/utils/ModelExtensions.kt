@@ -25,4 +25,18 @@ object ModelExtensions {
         this.forEach { list.add(it.toModel(it, model)) }
         return list
     }
+
+    fun listToString(list: List<String>): String{
+        var text = ""
+
+        if(list.size == 1){
+            text = list[0]
+        }else{
+            for ((index, value) in list.withIndex()) {
+                text += if(index == list.size -1 ){ value }else{ "$value, " }
+            }
+        }
+
+        return text
+    }
 }

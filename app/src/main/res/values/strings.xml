@@ -26,4 +26,8 @@
     <string name="commanders">Commanders</string>
     <string name="forces">Forces</string>
     <string name="factions_two">Factions Two</string>
+    <string name="continents">Continents</string>
+    <string name="cities">Cities</string>
+    <string name="castles">Castles</string>
+    <string name="neighbors">Neighbors</string>
 </resources>
