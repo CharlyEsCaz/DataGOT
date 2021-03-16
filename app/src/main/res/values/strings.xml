@@ -4,7 +4,6 @@
     <string name="battles">Battles</string>
     <string name="places">Places</string>
     <string name="houses">Houses</string>
-    <string name="religions">Religions</string>
     <string name="episodes">Episodes</string>
     <string name="titles">Titles</string>
     <string name="origin">Origin</string>
@@ -30,4 +29,8 @@
     <string name="cities">Cities</string>
     <string name="castles">Castles</string>
     <string name="neighbors">Neighbors</string>
+    <string name="founders">Founders</string>
+    <string name="rulers">Rulers</string>
+    <string name="religions">Religions</string>
+    <string name="type">Type</string>
 </resources>

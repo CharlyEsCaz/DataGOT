@@ -61,7 +61,7 @@ interface DataGoTService {
 
     // Get City by name
     @GET(BuildConfig.api_base + "show/cities/{name}")
-    fun getCityByName(@Path("name") name: String): Call<PlaceWS>
+    fun getCityByName(@Path("name") name: String): Call<List<PlaceWS>>
 
     // Get All Castles
     @GET(BuildConfig.api_base + "show/castles")

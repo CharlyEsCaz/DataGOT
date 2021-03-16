@@ -6,6 +6,8 @@ import androidx.databinding.DataBindingUtil
 import mx.com.charlyescaz.datagot.R
 import mx.com.charlyescaz.datagot.databinding.ActivityPlacesBinding
 import mx.com.charlyescaz.datagot.ui.CustomActivity
+import mx.com.charlyescaz.datagot.ui.places.castles.CastlesActivity
+import mx.com.charlyescaz.datagot.ui.places.cities.CitiesActivity
 import mx.com.charlyescaz.datagot.ui.places.continents.ContinentActivity
 
 class PlacesActivity: CustomActivity() {
@@ -26,11 +28,11 @@ class PlacesActivity: CustomActivity() {
         }
 
         vBind.cvCities.setOnClickListener {
-
+            startActivity( Intent(this, CitiesActivity::class.java) )
         }
 
         vBind.cvCastles.setOnClickListener {
-
+            startActivity( Intent(this, CastlesActivity::class.java) )
         }
     }
 

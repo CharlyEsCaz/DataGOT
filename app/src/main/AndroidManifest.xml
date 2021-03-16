@@ -25,6 +25,10 @@
         <activity android:name=".ui.battles.BattleDetailsActivity" />
         <activity android:name=".ui.places.PlacesActivity" />
         <activity android:name=".ui.places.continents.ContinentActivity" />
+        <activity android:name=".ui.places.cities.CitiesActivity" />
+        <activity android:name=".ui.places.cities.CityDetailsActivity" />
+        <activity android:name=".ui.places.castles.CastleDetailsActivity" />
+        <activity android:name=".ui.places.castles.CastlesActivity" />
     </application>
 
 </manifest>

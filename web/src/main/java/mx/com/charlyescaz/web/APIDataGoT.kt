@@ -189,7 +189,7 @@ object APIDataGoT {
         )
     }
 
-    fun getCityByName(name: String, cb: (success: Boolean, data: PlaceWS?) -> Unit){
+    fun getCityByName(name: String, cb: (success: Boolean, data: List<PlaceWS>?) -> Unit){
         doRequest(
             "Get City by Name",
             apiService.getCityByName(name),

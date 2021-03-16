@@ -19,13 +19,13 @@ object PlaceInteractor {
         }
     }
 
-    fun retrieveCity(name: String, cb: (result: PlaceViewModel?) -> Unit ){
+    fun retrieveCity(name: String, cb: (result: List<PlaceViewModel>?) -> Unit ){
         api.getCityByName(name){ success, result ->
             if (!success && result !== null) {
                 cb(null)
                 return@getCityByName
             }
-            cb(result?.toPlaceViewModel())
+            cb(result?.toListModel(PlaceViewModel::class.java))
         }
     }
 

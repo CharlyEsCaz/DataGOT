@@ -7,5 +7,5 @@ class PlaceViewModel{
     val location: String = ""
     val religion: List<String>? = null
     val rulers: List<String>? = null
-    val founders: List<String>? = null
+    val founder: List<String>? = null
 }
